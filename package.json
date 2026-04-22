@@ -1,6 +1,6 @@
 {
   "name": "lite-i18n",
-  "version": "1.0.1-beta.0",
+  "version": "1.0.0",
   "description": "Lightweight string translation library",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -18,9 +18,14 @@
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
-    "prepublishOnly": "npm run build"
+    "prepare": "npm run build",
+    "release": "release-it"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.0.0",
+    "@commitlint/config-conventional": "^19.0.0",
+    "@release-it/conventional-changelog": "^8.0.0",
+    "release-it": "^17.0.0",
     "tsup": "^8.0.0",
     "typescript": "^5.0.0"
   },
@@ -31,7 +36,12 @@
     "typescript"
   ],
   "license": "MIT",
-  "dependencies": {
-    "lite-i18n": "^1.0.1-beta.0"
-  }
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sosog/lite-i18n.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sosog/lite-i18n/issues"
+  },
+  "homepage": "https://github.com/sosog/lite-i18n#readme"
 }

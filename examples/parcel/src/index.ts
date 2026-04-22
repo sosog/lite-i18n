@@ -21,3 +21,19 @@ document.addEventListener('click', (e) => {
 
 // Initial render
 t.autoTranslate();
+
+// Programmatic / Inline Pluralization Example
+const programmaticExample = document.createElement('div');
+programmaticExample.style.marginTop = '2rem';
+programmaticExample.style.padding = '1rem';
+programmaticExample.style.borderTop = '1px solid #eee';
+
+const count = 2;
+const pluralText = t.plural(count, {
+    one: 'Programmatic: You have one notification',
+    other: 'Programmatic: You have {{count}} notifications',
+    zero: 'Programmatic: No notifications'
+});
+
+programmaticExample.innerHTML = `<p>${pluralText}</p>`;
+document.querySelector('.container')?.appendChild(programmaticExample);

@@ -71,15 +71,27 @@
         <!-- Simple translations -->
         <h1 data-i18n="global.title">Loading...</h1>
 
-        <!-- With variables -->
-        <p data-i18n="user.greeting" data-i18n-vars='{"name":"Alice"}'>Loading...</p>
-        <p data-i18n="messages.unread" data-i18n-vars='{"count":1}'>Loading...</p>
-        <p data-i18n="items.cart" data-i18n-vars='{"count":5}'>Loading...</p>
+        <div class="example-section">
+            <h2 style="font-size: 1.2rem; margin-top: 1.5rem;">Basic Translation</h2>
+            <p data-i18n="user.greeting" data-i18n-vars='{"name":"Alice"}'>Loading...</p>
+        </div>
+
+        <!-- Pluralization Examples -->
+        <div class="example-section">
+            <h2 style="font-size: 1.2rem; margin-top: 1.5rem;">Pluralization</h2>
+            <p data-i18n="messages.unread" data-i18n-vars='{"count":1}'>Loading...</p>
+            <p data-i18n="messages.unread" data-i18n-vars='{"count":5}'>Loading...</p>
+            <p data-i18n="items.cart" data-i18n-vars='{"count":0}'>Loading...</p>
+        </div>
 
         <!-- HTML Example -->
-        <div data-i18n-html="html.welcome" data-i18n-vars='{"name": "<span style=\"color: red\">Admin</span>"}'>
-            Loading...
+        <div class="example-section">
+            <h2 style="font-size: 1.2rem; margin-top: 1.5rem;">Rich Text / HTML</h2>
+            <div data-i18n-html="html.welcome" data-i18n-vars='{"name": "<span style=\"color: #646cff\">Admin</span>"}'>
+                Loading...
+            </div>
         </div>
+
     </div>
 
     <script type="module" src="./src/index.ts"></script>
